@@ -1,0 +1,99 @@
+body {
+    background: linear-gradient(120deg, #f0f0f0, #c0e0ff);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: #3498db;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover { color: #ffd700; }
+
+.animated { animation: fadeIn 2s ease-in-out; }
+@keyframes fadeIn { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
+
+h1 { color: #2c3e50; }
+h2, h3 { color: #34495e; }
+
+p { color: #555; line-height: 1.5; }
+
+img {
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+img:hover { transform: scale(1.05); }
+
+button {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+button:hover { transform: scale(1.1); }
+
+.message {
+    opacity: 0;
+    transition: 0.5s;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td { padding: 10px 20px; border: 1px solid #ccc; }
+
+th { background-color: #3498db; color: white; }
+
+tr:nth-child(even) { background-color: #f2f2f2; }
+
+section {
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+}
+
+section.visible { opacity: 1; transform: translateY(0); }
+
+.socials a {
+    font-size: 30px;
+    margin: 0 10px;
+    color: #3498db;
+    transition: 0.3s;
+}
+
+.socials a:hover { color: #e74c3c; }
