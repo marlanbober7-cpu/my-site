@@ -2,103 +2,58 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Визитка Тамера</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тамерлан | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script src="index.js"></script>
+    <div class="container">
+        <aside class="profile-card">
+            <div class="avatar-placeholder"></div> 
+            <h1>Tamerlan</h1>
+            <p class="status">Full-stack Developer</p>
+            <div class="about-me">
+                <p>Изучаю создание современных интерфейсов. Это мой первый школьный проект на HTML/CSS/JS.</p>
+            </div>
+        </aside>
 
-    <!-- Меню навигации -->
-    <nav>
-        <a href="#about">Обо мне</a> |
-        <a href="#skills">Навыки</a> |
-        <a href="#games">Игры</a> |
-        <a href="#contacts">Контакты</a>
-    </nav>
+        <main class="main-content">
+            <section class="skills-section">
+                <h2>My stack</h2>
+                <div class="skills-grid">
+                    <div class="skill-badge">HTML5</div>
+                    <div class="skill-badge">CSS3</div>
+                    <div class="skill-badge">JavaScript</div>
+                    <div class="skill-badge">VS Code</div>
+                    <a href="vizitka.html" 
+                    class="skill-badge">Project</a>
+                </div>
+            </section>
 
-    <!-- Заголовок -->
-    <header>
-        <h1 class="animated">Привет! Я Тамер</h1>
-        <h3>Начинающий веб-разработчик</h3>
-    </header>
-
-    <!-- Секция "Обо мне" -->
-    <section id="about">
-        <h2>Обо мне</h2>
-        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d" width="250" alt="Программист">
-        <p>Мне 14 лет, я начинаю изучать HTML и CSS и хочу стать крутым программистом!</p>
-    </section>
-
-    <!-- Секция "Навыки" -->
-    <section id="skills">
-        <h2>Мои навыки</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Переходы между страницами</li>
-            <li>Кнопки и интерактивность</li>
-        </ul>
-        <button onclick="showMessage()">Мой Instagram</button>
-        <p class="message">Ты кликнул на кнопку! 😎</p>
-    </section>
-
-    <!-- Секция "Игры" -->
-    <section id="games">
-        <h2>Мои любимые игры</h2>
-        <table>
-            <tr>
-                <th>Игра</th>
-                <th>Оценка</th>
-            </tr>
-            <tr>
-                <td>Minecraft</td>
-                <td>10/10</td>
-            </tr>
-            <tr>
-                <td>GTA 5</td>
-                <td>9/10</td>
-            </tr>
-        </table>
-    </section>
-
-    <!-- Секция "Контакты" -->
-    <section id="contacts">
-        <h2>Контакты</h2>
-        <p>Telegram:tmr1108</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://t.me/Tmr1108" width="200" alt="QR код Telegram">
-        <div class="socials">
-               <a href="https://www.instagram.com/Tmr1108/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://t.me/Tmr1108" target="_blank"><i class="fab fa-telegram"></i></a>
-    <a href="https://www.tiktok.com/@Tmr1108" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <section class="projects-section">
+                <h2>My first projects👻</h2>
+                    <div class="project-card">
+                        <div class="project-img terminal-style">_ > Генератор паролей</div>
+                        <h3>CyberVault(Кибер-Хранилище)</h3>
+                        <p>защищенный терминал для генерации криптостойких паролей also был создан с помощью HTML, CSS и JavaScript</p>
+                    </div>
+          
+            
+                <div class="project-card future-project">
+    <h3>Modern Landing</h3>
+    <div class="status-container">
+        <span class="pulse-dot"></span>
+        <span class="status-text">В разработке...</span>
+    </div>
+    <p class="loading-bar">[■■■■■□□□□□] 20%</p>
+    <p class="description">Создание адаптивного дизайна с использованием CSS Grid и Flexbox. Скоро здесь будет топовый лендинг.</p>
 </div>
-
-        </div>
-    </section>
-
-    <!-- JS -->
-    <script>
-        // Появление секций при прокрутке
-        const sections = document.querySelectorAll("section");
-
-        window.addEventListener("scroll", () => {
-            const triggerBottom = window.innerHeight / 5 * 4;
-
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if(sectionTop < triggerBottom) {
-                    section.classList.add("visible");
-                }
-            });
-        });
-
-        // Всплывающее сообщение при клике на кнопку
-        function showMessage() {
-            const msg = document.querySelector(".message");
-            msg.style.opacity = "1";
-            setTimeout(() => { msg.style.opacity = "0"; }, 2000);
-            window.open('https://www.instagram.com/Tmr1108/', '_blank');
-        }
-    </script>
-
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
