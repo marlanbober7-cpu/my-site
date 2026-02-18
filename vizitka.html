@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор паролей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    
+</body>
+</html>
+<div class="password-box">
+    <h2>ГЕНЕРАТОР ПАРОЛЕЙ 🔐</h2>
+    
+    <div class="result-container">
+        <span id="password-display">Нажми "Создать"</span>
+        <button id="copy-btn" title="Копировать">📋</button>
+    </div>
+
+    <div class="settings">
+        <div class="setting">
+            <label>Длина: <span id="length-val">12</span></label>
+            <input type="range" id="length-slider" min="4" max="20" value="12">
+        </div>
+    </div>
+
+    <button id="generate-btn" class="main-btn">Сгенерировать пароль</button>
+
+    <div class="login-section">
+        <p>Проверка входа:</p>
+        <input type="password" id="password-input" placeholder="Введите пароль..." class="password-input">
+        <button id="login-btn" class="login-style">Войти</button>
+         <script src="index.js"></script>
+    </div>
+</div>
